@@ -1,0 +1,34 @@
+{
+    "name": "loftschool/middleware",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Loftschool\\Middleware\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Valentin Udaltsov",
+            "email": "udaltsov.valentin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "psr/log": "^3.0",
+        "monolog/monolog": "^3.2",
+        "psr/http-server-middleware": "^1.0",
+        "symfony/messenger": "^6.1"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.25",
+        "friendsofphp/php-cs-fixer": "^3.6.0"
+    },
+    "scripts": {
+        "app": "php src/app.php",
+        "check": [
+            "vendor/bin/php-cs-fixer fix --dry-run --diff",
+            "vendor/bin/psalm --no-diff"
+        ]
+    }
+}
