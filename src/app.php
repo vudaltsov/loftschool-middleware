@@ -18,5 +18,5 @@ $application = new Application(
         new Validation(),
     ],
 );
-$request = new Request(uniqid(), 'awdawd');
+$request = new Request(uniqid(), 'Hi!');
 $_response = $application->handle($request);
