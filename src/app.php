@@ -14,8 +14,8 @@ $logger = new Logger('main', [new StreamHandler('php://stdout')]);
 $application = new Application(
     handler: new BusinessLogic(),
     middlewares: [
-        new Validation(),
         new Logging($logger),
+        new Validation(),
     ],
 );
 $request = new Request(uniqid(), 'awdawd');
